@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locatie op de campus | HAN Campus App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body data-title="Locatie op de campus">
+  <div class="map-bg" aria-hidden="true"></div>
+  <div class="map-overlay" aria-hidden="true"></div>
+  <div id="header-slot"></div>
+  <main class="page-main">
+    <header class="page-hero">
+      <nav class="crumb"><a href="/index.html">Home</a><span>›</span><span>Campus</span></nav>
+      <h1>Locatie op de campus</h1>
+    </header>
+    <section class="panel">
+      <div class="accent-bar accent-navy"></div>
+      <p>De HAN heeft campussen in Nijmegen en Arnhem. Deze app zoomt in op Nijmegen, Kapittelweg.</p>
+      <h3>Korte uitleg</h3>
+      <ul>
+        <li>Adres Nijmegen: Kapittelweg 33, 6525 EN Nijmegen.</li>
+        <li>Ook gebouwen aan de Laan van Scheut. Loopafstand van station Nijmegen Heyendaal.</li>
+        <li>Gebouwen hebben letters: B, C, D, E, F, G. De hoofdingang en Entree E staan op de kaart.</li>
+        <li>Wifi: eduroam (GetEduroam-app). Gasten: HANguest.</li>
+        <li>Studiecentrum/bibliotheek: Kapittelweg 33. Grote kantine met warme maaltijden daar ook.</li>
+      </ul>
+      <div class="building-map">
+        <a class="building" href="/pages/gebouwen.html">B <small>Onderwijs</small></a>
+        <a class="building" href="/pages/gebouwen.html">C <small>Onderwijs</small></a>
+        <a class="building" href="/pages/gebouwen.html">D <small>Onderwijs</small></a>
+        <a class="building" href="/pages/gebouwen.html">E <small>Entree E</small></a>
+        <a class="building" href="/pages/gebouwen.html">F <small>Onderwijs</small></a>
+        <a class="building" href="/pages/gebouwen.html">G <small>Onderwijs</small></a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>

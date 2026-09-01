@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAN Campus App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body>
+  <div class="map-bg" aria-hidden="true"></div>
+  <div class="map-overlay" aria-hidden="true"></div>
+  <div id="header-slot"></div>
+  <main class="page-main">
+    <section class="hero">
+      <h1>Welkom bij HAN Campus App</h1>
+      <p>Alles wat je nodig hebt op één plek.</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <a class="card-head" href="/pages/informatie.html">
+          <span class="chip-icon">i</span>
+          Belangrijke informatie
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <ul class="card-list">
+          <li><a href="/pages/roosters.html">📅 Roosters</a></li>
+          <li><a href="/pages/mededelingen.html">📣 Mededelingen</a></li>
+          <li><a href="/pages/tentamens.html">📄 Tentameninformatie</a></li>
+          <li><a href="/pages/nieuws.html">📰 Nieuws van de HAN</a></li>
+        </ul>
+        <svg class="watermark" width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".2"/><text x="12" y="16" text-anchor="middle" font-size="12">i</text></svg>
+      </article>
+      <article class="card">
+        <a class="card-head" href="/pages/opleidingen.html">
+          <span class="chip-icon">🎓</span>
+          Kies je opleiding
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <ul class="card-list">
+          <li><a href="/pages/opleiding-informatica.html">Informatica</a></li>
+          <li><a href="/pages/opleiding-cmd.html">Communication & Multimedia Design</a></li>
+          <li><a href="/pages/opleiding-hbo-ict.html">HBO-ICT</a></li>
+          <li><a href="/pages/opleiding-werktuigbouwkunde.html">Werktuigbouwkunde</a></li>
+          <li><a href="/pages/opleiding-verpleegkunde.html">Verpleegkunde</a></li>
+          <li><a class="more-link" href="/pages/opleidingen.html">En meer...</a></li>
+        </ul>
+      </article>
+      <article class="card">
+        <a class="card-head" href="/pages/navigatie.html">
+          <span class="chip-icon">➤</span>
+          Navigatie
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <ul class="card-list">
+          <li><a href="/pages/zoek-lokaal.html">🔍 Zoek een lokaal</a></li>
+          <li><a href="/pages/gebouwen.html">🏢 Vind een gebouw</a></li>
+          <li><a href="/pages/faciliteiten.html">🔀 Route naar faciliteiten</a></li>
+          <li><a href="/pages/binnen-buiten.html">📍 Binnen- en buitennavigatie</a></li>
+        </ul>
+      </article>
+      <article class="card">
+        <a class="card-head" href="/pages/locaties.html">
+          <span class="chip-icon">📍</span>
+          Leuke locaties
+          <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <ul class="card-list">
+          <li><a href="/pages/studieplekken.html">🖥️ Studieplekken</a></li>
+          <li><a href="/pages/kantine.html">☕ Kantine & horeca</a></li>
+          <li><a href="/pages/rustruimtes.html">🛋️ Rustruimtes</a></li>
+          <li><a href="/pages/ontmoetingsplekken.html">👥 Ontmoetingsplekken</a></li>
+          <li><a href="/pages/sport.html">🏃 Sportfaciliteiten</a></li>
+        </ul>
+      </article>
+    </section>
+    <div class="cta-wrap">
+      <a class="cta" href="/pages/verkennen.html">🧭 Start verkennen</a>
+    </div>
+  </main>
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>
