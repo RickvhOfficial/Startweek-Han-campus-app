@@ -1,6 +1,6 @@
 import { answerQuestion } from "./knowledge.js";
 
-const chatSvg = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M4 6h16v10H7l-3 3V6z"/></svg>`;
+const chatIcon = `<i class="fa-solid fa-comments" aria-hidden="true"></i>`;
 
 export function initChatbot() {
   if (document.querySelector(".chatbot")) return;
@@ -10,7 +10,7 @@ export function initChatbot() {
       <div class="chat-window" id="chat-window" role="dialog" aria-label="Campus chatbot">
         <div class="chat-head">
           <div><strong>Campus-assistent</strong><small>Stel je vraag over de HAN</small></div>
-          <button type="button" id="chat-close" aria-label="Sluiten">✕</button>
+          <button type="button" id="chat-close" aria-label="Sluiten"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         </div>
         <div class="chat-messages" id="chat-messages"></div>
         <div class="suggestions" id="chat-suggestions"></div>
@@ -19,7 +19,7 @@ export function initChatbot() {
           <button type="submit">Stuur</button>
         </form>
       </div>
-      <button class="chat-toggle" id="chat-toggle" aria-label="Open chatbot">${chatSvg}</button>
+      <button class="chat-toggle" id="chat-toggle" aria-label="Open chatbot">${chatIcon}</button>
     </div>`
   );
 

@@ -92,10 +92,10 @@ Aan het eind van jaar 1 krijg je een studieadvies. Nu is dat bij veel opleidinge
   {
     id: "campus",
     title: "Locatie op de campus",
-    keys: ["campus", "kapittelweg", "nijmegen", "arnhem", "gebouw", "adres", "hoofdingang", "heyendaal", "laan van scheut"],
-    answer: `De HAN-campus Nijmegen ligt vooral aan de Kapittelweg en Laan van Scheut, op loopafstand van station Nijmegen Heyendaal. Hoofdadres: Kapittelweg 33, 6525 EN Nijmegen. Gebouwen hebben letters (B, C, D, E, F, G).
+    keys: ["campus", "ruitenberglaan", "arnhem", "nijmegen", "gebouw", "adres", "hoofdingang", "presikhaaf", "hangar", "papendal"],
+    answer: `De HAN-campus Arnhem ligt aan de Ruitenberglaan, op loopafstand van station Arnhem Presikhaaf. Hoofdadressen: Ruitenberglaan 26, 27, 29 en 31, 6826 CC Arnhem. Gebouwen heten R26, R27, R29 en R31. Sport zit deels op Papendallaan 51.
 
-Arnhem heeft een eigen campus (Ruitenberglaan e.o.). Wifi: eduroam via de GetEduroam-app. Bibliotheek/studiecentrum: Kapittelweg 33.`,
+Wifi: eduroam via de GetEduroam-app. Studiecentra/multimedia: Ruitenberglaan 27 en 31. Hangar (koffie/ontmoeten) en Silentium (stilte/meditatie): Ruitenberglaan 31.`,
     href: "/pages/campus.html",
   },
   {
@@ -123,7 +123,7 @@ Arnhem heeft een eigen campus (Ruitenberglaan e.o.). Wifi: eduroam via de GetEdu
     id: "navigatie",
     title: "Navigatie",
     keys: ["lokaal", "lokaalnummer", "route", "navigatie", "binnen", "buiten", "vind gebouw", "zoek een lokaal"],
-    answer: `Lokalen beginnen meestal met een gebouwletter, verdieping en nummer, bijvoorbeeld E2.10 = gebouw E, 2e verdieping, lokaal 10. Gebruik de pagina Zoek een lokaal of de plattegrond onder Verkennen.`,
+    answer: `Lokalen beginnen meestal met het gebouw, de verdieping en het nummer, bijvoorbeeld R31.2.10 = gebouw R31 (Ruitenberglaan 31), 2e verdieping, ruimte 10. Gebruik de pagina Zoek een lokaal of de plattegrond onder Verkennen.`,
     href: "/pages/navigatie.html",
   },
   {
@@ -143,15 +143,15 @@ Wachtwoord vergeten: han.nl/wachtwoordvergeten. Nieuwe telefoon: han.nl/mfa. Luk
   {
     id: "opleidingen",
     title: "Opleidingen",
-    keys: ["opleiding", "informatica", "cmd", "hbo-ict", "hbo ict", "werktuigbouwkunde", "verpleegkunde", "bedrijfskunde", "social work"],
-    answer: `Op de homepage kies je een opleiding. Informatica, CMD, HBO-ICT, Werktuigbouwkunde, Verpleegkunde en meer hebben een eigen pagina met een korte uitleg. Elke opleiding gebruikt Brightspace, Osiris en MyX; stages vaak via iSAS.`,
+    keys: ["opleiding", "automotive", "elektrotechniek", "built environment", "werktuigbouwkunde", "bedrijfskunde", "international business", "finance"],
+    answer: `Op de homepage kies je een opleiding op campus Arnhem. Automotive, Werktuigbouwkunde, Elektrotechniek, Built Environment, Bedrijfskunde, International Business en Finance & Control hebben een eigen pagina. Elke opleiding gebruikt Brightspace, Osiris en MyX; stages vaak via iSAS.`,
     href: "/pages/opleidingen.html",
   },
   {
     id: "locaties",
     title: "Leuke locaties",
     keys: ["studieplek", "kantine", "horeca", "rustruimte", "sport", "ontmoeting", "bibliotheek"],
-    answer: `Op de campus vind je studieplekken (o.a. studiecentrum Kapittelweg 33), kantines per gebouw (warme maaltijden vooral bij Kapittelweg 33), rustruimtes, ontmoetingsplekken en sportfaciliteiten. Open de tegel Leuke locaties voor een overzicht.`,
+    answer: `Op campus Arnhem vind je studieplekken (multimedia-/studiecentra Ruitenberglaan 27 en 31), kantines per gebouw (o.a. de Hangar in R31), de Silentium, ontmoetingsplekken en sport (o.a. Papendal). Open de tegel Leuke locaties voor een overzicht.`,
     href: "/pages/locaties.html",
   },
 ];
@@ -169,7 +169,7 @@ export function answerQuestion(raw) {
     };
   }
   if (/dank|bedankt|thanks|top|perfect/.test(q)) {
-    return { text: "Graag gedaan. Als je nog iets wilt weten over de HAN, stel het gerust.", suggestions: ["Campus Nijmegen", "ANS toetsen", "Studiepunten"] };
+    return { text: "Graag gedaan. Als je nog iets wilt weten over de HAN, stel het gerust.", suggestions: ["Campus Arnhem", "ANS toetsen", "Studiepunten"] };
   }
 
   const scored = knowledge.map((item) => {

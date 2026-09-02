@@ -220,6 +220,40 @@ button {
   flex-shrink: 0;
 }
 
+.chip-icon i {
+  font-size: 0.82rem;
+}
+
+.icon-wrap i {
+  font-size: 1.05rem;
+}
+
+.card-list i {
+  width: 1.15em;
+  text-align: center;
+  opacity: 0.92;
+}
+
+.cta i,
+.mini-card i {
+  margin-right: 6px;
+}
+
+.mini-card i {
+  color: var(--han);
+}
+
+.watermark.fa-solid {
+  font-size: 7.5rem;
+  right: 8px;
+  bottom: -8px;
+}
+
+.help-block h3 i {
+  margin-right: 8px;
+  color: var(--han);
+}
+
 .card:nth-child(2) .chip-icon { background: #eef3fb; color: #2f6bdc; }
 .card:nth-child(3) .chip-icon { background: var(--han); color: #fff; }
 .card:nth-child(4) .chip-icon { background: rgba(255, 255, 255, 0.18); color: #fff; }
@@ -528,6 +562,8 @@ button {
   transition: transform 0.2s ease;
   animation: float 3.2s ease-in-out infinite;
 }
+
+.chat-toggle i { font-size: 1.25rem; color: #fff; }
 
 .chat-toggle:hover { transform: scale(1.08); }
 
