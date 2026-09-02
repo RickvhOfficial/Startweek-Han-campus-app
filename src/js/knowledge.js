@@ -11,6 +11,20 @@ Tip: check Brightspace minstens een paar keer per week, vooral rondom inlevermom
     href: "/pages/brightspace.html",
   },
   {
+    id: "Help",
+    title: "Help",
+    keys: ["113", "112", "help", "dood", "zelfmoord"],
+    answer: `Bel 112 of 113 voor hulp bij een psychische crisis/noodsituatie.`,
+    href: "https://113.nl",
+  },
+  {
+    id: "Grap",
+    title: "grap",
+    keys: ["prank", "grap", "lol", "fattoe", "dronken", "dronkenprank"],
+    answer: `Zie hier een leuk random filmpje om te lachen.`,
+    href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+  },
+  {
     id: "osiris",
     title: "Osiris",
     keys: ["osiris", "cijfers", "tentamen inschrijven", "studieresultaten", "voortgang", "herkansing inschrijven"],
