@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zoek een lokaal | HAN Campus App</title>
+  <title>Zoek een lokaal | HAN Campus Arnhem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/src/css/main.css" />
 </head>
 <body data-title="Zoek een lokaal">
@@ -20,20 +21,20 @@
     </header>
     <section class="panel">
       <div class="accent-bar accent-navy"></div>
-      <p>Lokalen zijn opgebouwd als <strong>gebouw + verdieping + nummer</strong>. E2.10 = gebouw E, verdieping 2, ruimte 10.</p>
+      <p>Lokalen zijn opgebouwd als <strong>gebouw + verdieping + nummer</strong>. R31.2.10 = gebouw R31 (Ruitenberglaan 31), verdieping 2, ruimte 10.</p>
       <form class="search-box" id="room-form">
-        <input id="room-q" placeholder="Typ een lokaal, bijv. C1.04" />
+        <input id="room-q" placeholder="Typ een lokaal, bijv. R26.1.08" />
         <button type="submit">Zoek</button>
       </form>
       <div class="result-list" id="room-out"></div>
     </section>
     <script type="module">
       const rooms = {
-        "e2.10": "Gebouw E, 2e verdieping. Volg Entree E, trap of lift naar 2, gang rechts.",
-        "c1.04": "Gebouw C, 1e verdieping. Vanaf de binnenplaats de C-vleugel in.",
-        "d0.12": "Gebouw D, begane grond. Dicht bij de doorgang naar B.",
-        "g3.21": "Gebouw G, 3e verdieping. Lift in de G-hal.",
-        "b1.08": "Gebouw B, 1e verdieping. Richting Kapittelweg-zijde."
+        "r31.2.10": "Gebouw R31 (Ruitenberglaan 31), 2e verdieping. Via de Hangar-entree, trap of lift naar 2.",
+        "r27.1.04": "Gebouw R27, 1e verdieping. Dicht bij het studiecentrum/multimedia.",
+        "r29.0.12": "Gebouw R29, begane grond. Centrale gang, volg de bewegwijzering.",
+        "r26.3.21": "Gebouw R26, 3e verdieping. Engineering & Automotive-vleugel, lift in de hal.",
+        "r26.1.08": "Gebouw R26, 1e verdieping. Richting Ruitenberglaan-zijde / labs."
       };
       document.getElementById("room-form").addEventListener("submit", (e) => {
         e.preventDefault();
@@ -41,7 +42,7 @@
         const hit = rooms[q];
         document.getElementById("room-out").innerHTML = hit
           ? '<div class="result-item"><span>'+q.toUpperCase()+' — '+hit+'</span></div>'
-          : '<div class="result-item"><span>Geen exacte match. Probeer E2.10, C1.04, D0.12, G3.21 of B1.08. Of open Gebouwen.</span></div>';
+          : '<div class="result-item"><span>Geen exacte match. Probeer R31.2.10, R27.1.04, R29.0.12, R26.3.21 of R26.1.08. Of open Gebouwen.</span></div>';
       });
     </script>
   </main>

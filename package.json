@@ -3,7 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "description": "HAN Campus App — startweek opdracht",
+  "homepage": "https://github.com/RickvhOfficial/Startweek-Han-campus-app#readme",
+  "bugs": {
+    "url": "https://github.com/RickvhOfficial/Startweek-Han-campus-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickvhOfficial/Startweek-Han-campus-app.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "watch": "node server.mjs",
     "dev": "node server.mjs",

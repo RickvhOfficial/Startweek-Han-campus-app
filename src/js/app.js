@@ -1,21 +1,26 @@
 import { initChatbot } from "./chatbot.js";
 
-const ICON = {
-  bell: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9a6 6 0 1 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>`,
-  user: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3.2 3.8-5 7-5s5.6 1.8 7 5"/></svg>`,
-};
+function ensureFontAwesome() {
+  if (document.getElementById("fa-cdn")) return;
+  const link = document.createElement("link");
+  link.id = "fa-cdn";
+  link.rel = "stylesheet";
+  link.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
+  link.crossOrigin = "anonymous";
+  document.head.appendChild(link);
+}
 
 function header() {
   return `
     <header class="site-header">
-      <a class="brand" href="/index.html"><strong>HAN</strong>Campus App</a>
+      <a class="brand" href="/index.html"><strong>HAN</strong>Campus Arnhem</a>
       <nav class="header-actions">
         <a class="header-link" href="/pages/meldingen.html">
-          <span class="icon-wrap">${ICON.bell}<span class="badge">2</span></span>
+          <span class="icon-wrap"><i class="fa-solid fa-bell" aria-hidden="true"></i><span class="badge">2</span></span>
           Meldingen
         </a>
         <a class="header-link" href="/pages/profiel.html">
-          <span class="icon-wrap">${ICON.user}</span>
+          <span class="icon-wrap"><i class="fa-solid fa-user" aria-hidden="true"></i></span>
           Profiel
         </a>
       </nav>
@@ -23,11 +28,11 @@ function header() {
 }
 
 function labels() {
-  return `<div class="map-labels"><span>Kapittelweg</span><span>HAN Hoofdingang</span><span>Nijmegen →</span><span>Entree E →</span></div>`;
+  return `<div class="map-labels"><span>Ruitenberglaan</span><span>HAN Campus Arnhem</span><span>Presikhaaf →</span><span>Hangar R31 →</span></div>`;
 }
 
 export function pageShell(title) {
-  document.title = title ? `${title} | HAN Campus App` : "HAN Campus App";
+  document.title = title ? `${title} | HAN Campus Arnhem` : "HAN Campus Arnhem";
   const slot = document.getElementById("header-slot");
   if (slot) slot.outerHTML = header();
   else document.body.insertAdjacentHTML("afterbegin", header());
@@ -38,6 +43,7 @@ export function pageShell(title) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  ensureFontAwesome();
   const title = document.body.dataset.title || "";
   pageShell(title);
 });
