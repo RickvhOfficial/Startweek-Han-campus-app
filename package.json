@@ -18,6 +18,10 @@
   "directories": {
     "test": "test"
   },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "watch": "node server.mjs",
     "dev": "node server.mjs",
