@@ -22,5 +22,8 @@
     "watch": "node server.mjs",
     "dev": "node server.mjs",
     "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
   }
 }
